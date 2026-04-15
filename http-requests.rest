@@ -1,0 +1,48 @@
+GET http://localhost:3000/albums
+
+###
+// Pitää olla oikea id, että toimii
+GET http://localhost:3000/albums/69ac1768a9231f5e277c686c
+
+###
+POST http://localhost:3000/albums/
+Content-Type: application/json
+
+{
+  "artist": "Ella Fizgerald",
+  "title": "Summertime",
+  "year": 1968,
+  "genre": "jazz",
+  "tracks": 2
+}
+
+###
+// Register a new user
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Matti Meikäläinen",
+  "email": "matti@example.com",
+  "password": "supersecretpassword123",
+  "passwordConfirm": "supersecretpassword123"
+}
+
+// PUT ei toteutettu Arin jakamassa versioissa
+// Pitää olla oikea id, että toimii
+###
+PUT http://localhost:3000/albums/69ac1768a9231f5e277c686c
+Content-Type: application/json
+
+{
+   "artist": "Ella Fizgerald",
+  "title": "Summertime (remastered)",
+  "year": 2026,
+  "genre": "jazz",
+  "tracks": 2
+}
+
+// DELETE ei toteutettu Arin jakamassa versioissa
+// Pitää olla oikea id, että toimii
+###
+DELETE http://localhost:3000/albums/69ac1768a9231f5e277c686e

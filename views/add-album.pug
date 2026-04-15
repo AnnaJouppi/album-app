@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .row.justify-content-center
+    .col-md-8
+      .card.mt-4
+        .card-body
+          h1.card-title.mb-4.text-center Add Album
+
+          //- Notice the action is pointing to your albums router!
+          form(action="/albums", method="POST")
+            .mb-3
+              label.form-label(for="artist") Artist
+              input#artist.form-control(name="artist", type="text", required)
+            
+            .mb-3
+              label.form-label(for="title") Title
+              input#title.form-control(name="title", type="text", required)
+            
+            .mb-3
+              label.form-label(for="year") Year
+              input#year.form-control(name="year", type="number", required)
+            
+            .mb-3
+              label.form-label(for="genre") Genre
+              input#genre.form-control(name="genre", type="text", required)
+            
+            .mb-3
+              label.form-label(for="tracks") Tracks
+              input#tracks.form-control(name="tracks", type="number", required)
+            
+            .d-grid.gap-2.mt-4
+              button.btn.btn-primary(type="submit") Add Album
+              
+          .text-center.mt-3
+            a.text-decoration-none(href="/") Back to Home
