@@ -25,7 +25,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-  secret: process.env.ACCESS_TOKEN_SECRET || 'fallbackSecretKey', // Uses your master key
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   store: MongoDBStore.create({
